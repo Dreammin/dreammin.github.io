@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>选课系统前端性能评估和解决方案 | Dreammin&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="性能评估评估内容网页：选课系统管理员首页地址：http://****.cqu.edu.cn/**** 登录名：******内容：样式文件[3/359.6KB]，脚本文件[4/1292.8KB]，图片文件[4/6.4KB]，文字文件[2/191KB]
+评估工具
+
+Chrome dev tools
+pageSpeed">
+<meta property="og:type" content="article">
+<meta property="og:title" content="选课系统前端性能评估和解决方案">
+<meta property="og:url" content="http://dreammin.github.com/20160125/选课系统前端性能评估和解决方案/index.html">
+<meta property="og:site_name" content="Dreammin's blog">
+<meta property="og:description" content="性能评估评估内容网页：选课系统管理员首页地址：http://****.cqu.edu.cn/**** 登录名：******内容：样式文件[3/359.6KB]，脚本文件[4/1292.8KB]，图片文件[4/6.4KB]，文字文件[2/191KB]
+评估工具
+
+Chrome dev tools
+pageSpeed">
+<meta property="og:image" content="http://dreammin.github.com/../img/performance/chrome_present.png">
+<meta property="og:image" content="http://dreammin.github.com/../img/performance/time_used.png">
+<meta property="og:image" content="http://dreammin.github.com/../img/performance/pagespeed_analysis.png">
+<meta property="og:image" content="http://dreammin.github.com/../img/performance/chrome_content_size.png">
+<meta property="og:image" content="http://dreammin.github.com/../img/performance/compress_before.png">
+<meta property="og:image" content="http://dreammin.github.com/../img/performance/compress_after.png">
+<meta property="og:image" content="http://dreammin.github.com/../img/performance/chrome_compress_after.png">
+<meta property="og:image" content="http://dreammin.github.com/../img/performance/pagespeed_compress_before.png">
+<meta property="og:image" content="http://dreammin.github.com/../img/performance/pagespeed_compress_after.png">
+<meta property="og:updated_time" content="2016-01-25T07:04:39.878Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="选课系统前端性能评估和解决方案">
+<meta name="twitter:description" content="性能评估评估内容网页：选课系统管理员首页地址：http://****.cqu.edu.cn/**** 登录名：******内容：样式文件[3/359.6KB]，脚本文件[4/1292.8KB]，图片文件[4/6.4KB]，文字文件[2/191KB]
+评估工具
+
+Chrome dev tools
+pageSpeed">
+  
+    <link rel="alternative" href="/atom.xml" title="Dreammin&#39;s blog" type="application/atom+xml">
+  
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/">Dreammin</a></h1>
+        </hgroup>
+
+        
+        
+        <form><input type="text" class="search" placeholder=" Search..."></form>
+                
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="/1553085243@qq.com" title="Email"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/Dreammin" title="GitHub"></a></li>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/compress/" style="font-size: 10px;">compress</a> <a href="/tags/pageSpeed/" style="font-size: 10px;">pageSpeed</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://panzhihui.github.io">Spanda</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Dreammin</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img lazy-src="/img/avatar.jpg" class="js-avatar">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Dreammin</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="/1553085243@qq.com" title="Email"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/Dreammin" title="GitHub"></a></li>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-选课系统前端性能评估和解决方案" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160125/选课系统前端性能评估和解决方案/" class="article-date">
+      <time datetime="2016-01-25T05:58:31.000Z" itemprop="datePublished">2016-01-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      选课系统前端性能评估和解决方案
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/前端学习/">前端学习</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chrome/">chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/compress/">compress</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pageSpeed/">pageSpeed</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="u6027_u80FD_u8BC4_u4F30"><a href="#u6027_u80FD_u8BC4_u4F30" class="headerlink" title="性能评估"></a>性能评估</h2><h3 id="u8BC4_u4F30_u5185_u5BB9"><a href="#u8BC4_u4F30_u5185_u5BB9" class="headerlink" title="评估内容"></a>评估内容</h3><p>网页：选课系统管理员首页<br>地址：<code>http://****.cqu.edu.cn/****</code> 登录名：<code>******</code><br>内容：样式文件[3/359.6KB]，脚本文件[4/1292.8KB]，图片文件[4/6.4KB]，文字文件[2/191KB]</p>
+<h3 id="u8BC4_u4F30_u5DE5_u5177"><a href="#u8BC4_u4F30_u5DE5_u5177" class="headerlink" title="评估工具"></a>评估工具</h3><blockquote>
+<ul>
+<li>Chrome dev tools</li>
+<li>pageSpeed</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<h3 id="u8BC4_u4F30_u7ED3_u679C_u4E0E_u5206_u6790"><a href="#u8BC4_u4F30_u7ED3_u679C_u4E0E_u5206_u6790" class="headerlink" title="评估结果与分析"></a>评估结果与分析</h3><p>1.使用chrome开发者工具查看如下图1所示：<br><img src="/../img/performance/chrome_present.png" alt="chrome result">图1</p>
+<p>其中，</p>
+<blockquote>
+<p>Size = Transfer size 【Compression(Content) + Response Header】<br>Content = Actual size</p>
+</blockquote>
+<p>第一条请求中的消耗时间分布图如图2：<br><img src="/../img/performance/time_used.png" alt="消耗时间分布">图2</p>
+<p>其中，TTFB (Time To First Byte)，是最初的网络请求被发起到从服务器接收到第一个字节这段时间，它包含了 TCP连接时间，发送HTTP请求时间和获得响应消息第一个字节的时间。</p>
+<p>2.使用pageSpeed插件分析如下图3所示：<br><img src="/../img/performance/pagespeed_analysis.png" alt="pageSpeed">图3</p>
+<p>3.结果分析</p>
+<ul>
+<li>图1中1标签为主页面请求，该请求时间消耗如图2所示，由图可知该部分主要时间消耗在后台处理和请求传输上，因此需进行后台和网络优化。</li>
+<li>由图1中的content和size的大小对比以及图2中的结果可知前端静态文件未启用压缩是影响该系统前端性能的关键因素，因此造成图1中如标记2所示的由于文件较大而造成的时间消耗。</li>
+<li>图1中3标签时间消耗主要来自于前端js阻塞。页面在遇到js标签则会等待js脚本的解析和执行。因此当脚本解析执行完成后才会进行页面元素的下载和页面渲染。</li>
+</ul>
+<h2 id="u63D0_u9AD8_u6027_u80FD_u65B9_u6848"><a href="#u63D0_u9AD8_u6027_u80FD_u65B9_u6848" class="headerlink" title="提高性能方案"></a>提高性能方案</h2><p>首先开启服务端压缩，减小传输内容大小，从而提高内容下载速度。<br>进一步解决js阻塞问题，目前已知的方法有合并脚本、延迟脚本加载等（待下一步具体研究）。</p>
+<h2 id="u542F_u7528_u538B_u7F29"><a href="#u542F_u7528_u538B_u7F29" class="headerlink" title="启用压缩"></a>启用压缩</h2><h3 id="u672C_u5730Tomcat_u542F_u7528_u538B_u7F29"><a href="#u672C_u5730Tomcat_u542F_u7528_u538B_u7F29" class="headerlink" title="本地Tomcat启用压缩"></a>本地Tomcat启用压缩</h3><h4 id="u914D_u7F6ETomcat_u538B_u7F29"><a href="#u914D_u7F6ETomcat_u538B_u7F29" class="headerlink" title="配置Tomcat压缩"></a>配置Tomcat压缩</h4><p>配置%tomcatHome%conf/server.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">Connector</span> <span class="attribute">port</span>=<span class="value">"8080"</span> <span class="attribute">protocol</span>=<span class="value">"HTTP/1.1"</span></span><br><span class="line">        <span class="attribute">connectionTimeout</span>=<span class="value">"20000"</span></span><br><span class="line">        <span class="attribute">redirectPort</span>=<span class="value">"8443"</span> </span><br><span class="line">	<span class="attribute">compression</span>=<span class="value">"on"</span> </span><br><span class="line">        <span class="attribute">compressionMinSize</span>=<span class="value">"100"</span> </span><br><span class="line">        <span class="attribute">noCompressionUserAgents</span>=<span class="value">""</span> </span><br><span class="line">        <span class="attribute">compressableMimeType</span>=<span class="value">"text/html,text/xml,text/css,application/javascript"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>其中关键代码为：</p>
+<blockquote>
+<p>compression=”on” //启用压缩<br>compressionMinSize=”2048” //启用压缩的输出内容大小，这里面默认为2KB<br>noCompressionUserAgents=”” //对于其中的浏览器，不启用压缩<br>compressableMimeType=”text/html,text/xml,text/css,application/javascript”//压缩类型<br><em>注：js文件类型在tomcat7中改为application/javascript，文件类型表示在tomcat下的web.xml文件中可以查看。</em></p>
+</blockquote>
+<h4 id="u6D4B_u8BD5_u538B_u7F29_u7ED3_u679C"><a href="#u6D4B_u8BD5_u538B_u7F29_u7ED3_u679C" class="headerlink" title="测试压缩结果"></a>测试压缩结果</h4><p>测试代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.apache.commons.httpclient.HttpClient;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.httpclient.methods.GetMethod;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test</span>  </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">		  HttpClient http = <span class="keyword">new</span> HttpClient();</span><br><span class="line">	GetMethod get = <span class="keyword">new</span> GetMethod(<span class="string">"http://isse.cqu.edu.cn/enroll/themes/kboot/stylesheets/kboot.2.5.2.min.css"</span>);<span class="comment">//添加文件地址</span></span><br><span class="line">		  <span class="keyword">try</span>&#123;</span><br><span class="line">		  	get.addRequestHeader(<span class="string">"accept-encoding"</span>, <span class="string">"gzip,deflate"</span>);</span><br><span class="line">get.addRequestHeader(<span class="string">"user-agent"</span>, <span class="string">"Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"</span>);</span><br><span class="line">		  	System.out.println(get.getRequestHeaders());</span><br><span class="line">		  	<span class="keyword">int</span> er = http.executeMethod(get);</span><br><span class="line">		  	<span class="keyword">if</span>(er==<span class="number">200</span>)&#123;</span><br><span class="line">		   		String html = get.getResponseBodyAsString();</span><br><span class="line">		   		System.out.println(html);</span><br><span class="line">		   		System.out.println(html.getBytes().length);</span><br><span class="line">		   		System.out.println(get.getResponseContentLength());</span><br><span class="line">		  	&#125;</span><br><span class="line">		&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">		   get.releaseConnection();</span><br><span class="line">		&#125;</span><br><span class="line">	  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其中<code>System.out.println(html)</code>打印结果为乱码，且<br><code>System.out.println(get.getResponseContentLength())</code>打印结果为-1则表明文件已经被压缩。<br>测试显示前端静态文件均已被压缩。</p>
+<h4 id="u672C_u5730_u538B_u7F29_u524D_u540E_u5BF9_u6BD4"><a href="#u672C_u5730_u538B_u7F29_u524D_u540E_u5BF9_u6BD4" class="headerlink" title="本地压缩前后对比"></a>本地压缩前后对比</h4><p>1.chrome查看content与size大小对比<br><img src="/../img/performance/chrome_content_size.png" alt="chrome"><br>统计图中数据汇总如下表格所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">文件名</th>
+<th style="text-align:center">Content(KB)</th>
+<th style="text-align:center">Size(KB)</th>
+<th style="text-align:center">压缩率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Kboot.2.5.2.min.css</td>
+<td style="text-align:center">256</td>
+<td style="text-align:center">44.6</td>
+<td style="text-align:center">0.825781</td>
+</tr>
+<tr>
+<td style="text-align:center">daterangepicker-bs3.css</td>
+<td style="text-align:center">5.0</td>
+<td style="text-align:center">1.6</td>
+<td style="text-align:center">0.68</td>
+</tr>
+<tr>
+<td style="text-align:center">enroll.css</td>
+<td style="text-align:center">98.6</td>
+<td style="text-align:center">20.5</td>
+<td style="text-align:center">0.792089</td>
+</tr>
+<tr>
+<td style="text-align:center">kboot.2.5.2.min.js</td>
+<td style="text-align:center">1228.8</td>
+<td style="text-align:center">312</td>
+<td style="text-align:center">0.746094</td>
+</tr>
+<tr>
+<td style="text-align:center">datepicker-zh-CN.js</td>
+<td style="text-align:center">0.96</td>
+<td style="text-align:center">0.8</td>
+<td style="text-align:center">0.166667</td>
+</tr>
+<tr>
+<td style="text-align:center">daterangepicker.js</td>
+<td style="text-align:center">51.0</td>
+<td style="text-align:center">13.1</td>
+<td style="text-align:center">0.743137</td>
+</tr>
+<tr>
+<td style="text-align:center">jwManager.js</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">2.9</td>
+<td style="text-align:center">0.758333</td>
+</tr>
+<tr>
+<td style="text-align:center">合计</td>
+<td style="text-align:center">1652.36</td>
+<td style="text-align:center">395.5</td>
+<td style="text-align:center">0.760645</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Content = Actual size<br>Size = Transfer size 【Compression(Content) + Response Header】<br>压缩率=(content-size)/content<br>结论：通过Tomcat启动压缩后对前端的静态文件（css和javascript文件）的平均压缩率为76%。</p>
+</blockquote>
+<p>2.压缩前后pagespeed评估结果对比<br>启用压缩前：<br><img src="/../img/performance/compress_before.png" alt="compress before"></p>
+<p>启用压缩后：<br><img src="/../img/performance/compress_after.png" alt="compress before"></p>
+<h3 id="u670D_u52A1_u5668_u914D_u7F6E_u538B_u7F29"><a href="#u670D_u52A1_u5668_u914D_u7F6E_u538B_u7F29" class="headerlink" title="服务器配置压缩"></a>服务器配置压缩</h3><h4 id="Apache_u914D_u7F6E_u538B_u7F29"><a href="#Apache_u914D_u7F6E_u538B_u7F29" class="headerlink" title="Apache配置压缩"></a>Apache配置压缩</h4><p>在%apacheHome%conf/hppd.conf文件中开启以下两个模块，即将其前面的#去除。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LoadModule deflate_module modules/mod_deflate.so</span><br><span class="line">LoadModule headers_module modules/mod_headers.so</span><br><span class="line">LoadModule filter_module modules/mod_filter.so</span><br></pre></td></tr></table></figure></p>
+<p>在文件最后添加如下代码：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">IfModule</span> <span class="attribute">mod_deflate.c</span>&gt;</span></span><br><span class="line">       DeflateCompressionLevel 7</span><br><span class="line">       AddOutputFilterByType DEFLATE text/html application/javascript text/css text/xml text/javascript </span><br><span class="line">       AddOutputFilter DEFLATE css js</span><br><span class="line">       SetOutputFilter DEFLATE     </span><br><span class="line">       SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzipdont-vary</span><br><span class="line">       SetEnvIfNoCase Request_URI .(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzipdont-vary</span><br><span class="line">       SetEnvIfNoCase Request_URI .(?:pdf|mov|avi|mp3|mp4|rm)$ no-gzipdont-vary</span><br><span class="line"><span class="tag">&lt;/<span class="title">IfModule</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><em>注：Apache2.2版本后若不启用filter_module模块，使用httpd –t命令测试配置的正确性会出现如下错误：</em></p>
+<blockquote>
+<p>D:\tools\Apache24\bin&gt;httpd -t<br>AH00526: Syntax error on line 613 of D:/tools/Apache24/conf/httpd.conf:<br>Invalid command ‘AddOutputFilterByType’, perhaps misspelled or defined by a module not included in the server configuration</p>
+</blockquote>
+<h4 id="u670D_u52A1_u5668_u7AEF_u538B_u7F29_u524D_u540E_u5BF9_u6BD4"><a href="#u670D_u52A1_u5668_u7AEF_u538B_u7F29_u524D_u540E_u5BF9_u6BD4" class="headerlink" title="服务器端压缩前后对比"></a>服务器端压缩前后对比</h4><p>1.chrome查看content与size大小对比<br>启动压缩后：<br><img src="/../img/performance/chrome_compress_after.png" alt="chrome compress after"></p>
+<p>统计图中数据汇总如下表格所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">文件名</th>
+<th style="text-align:center">Content(KB)</th>
+<th style="text-align:center">Size(KB)</th>
+<th style="text-align:center">压缩率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Kboot.2.5.2.min.css</td>
+<td style="text-align:center">256</td>
+<td style="text-align:center">43.7</td>
+<td style="text-align:center">0.829297</td>
+</tr>
+<tr>
+<td style="text-align:center">daterangepicker-bs3.css</td>
+<td style="text-align:center">5.0</td>
+<td style="text-align:center">1.6</td>
+<td style="text-align:center">0.68</td>
+</tr>
+<tr>
+<td style="text-align:center">enroll.css</td>
+<td style="text-align:center">98.6</td>
+<td style="text-align:center">20.1</td>
+<td style="text-align:center">0.796146</td>
+</tr>
+<tr>
+<td style="text-align:center">kboot.2.5.2.min.js</td>
+<td style="text-align:center">1228.8</td>
+<td style="text-align:center">307</td>
+<td style="text-align:center">0.750163</td>
+</tr>
+<tr>
+<td style="text-align:center">datepicker-zh-CN.js</td>
+<td style="text-align:center">0.96</td>
+<td style="text-align:center">0.82</td>
+<td style="text-align:center">0.145833</td>
+</tr>
+<tr>
+<td style="text-align:center">daterangepicker.js</td>
+<td style="text-align:center">51.0</td>
+<td style="text-align:center">13.1</td>
+<td style="text-align:center">0.743137</td>
+</tr>
+<tr>
+<td style="text-align:center">jwManager.js</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">2.9</td>
+<td style="text-align:center">0.758333</td>
+</tr>
+<tr>
+<td style="text-align:center">合计</td>
+<td style="text-align:center">1652.36</td>
+<td style="text-align:center">389.22</td>
+<td style="text-align:center">0.764446</td>
+</tr>
+</tbody>
+</table>
+<p>结论：在服务器端启动apache压缩后，前端的静态文件（css和javascript文件）的平均压缩率可达76.4%。<br>2.压缩前后pagespeed评估结果对比<br>启用压缩前：<br><img src="/../img/performance/pagespeed_compress_before.png" alt="pageSpeed compress before"></p>
+<p>启用压缩后：<br><img src="/../img/performance/pagespeed_compress_after.png" alt="pageSpeed compress before"></p>
+<p>结论：Apache服务端启动压缩后pagespeed评估得分由44增长至92（满分100分）。</p>
+<h4 id="u670D_u52A1_u5668_u7AEF_u542F_u52A8_u538B_u7F29_u5176_u4ED6_u65B9_u5F0F"><a href="#u670D_u52A1_u5668_u7AEF_u542F_u52A8_u538B_u7F29_u5176_u4ED6_u65B9_u5F0F" class="headerlink" title="服务器端启动压缩其他方式"></a>服务器端启动压缩其他方式</h4><p>1.Tomcat启动压缩<br>与本地同样方式配置服务器端Tomcat压缩，使用评估测试工具检测浏览器获取的前端静态文件并未完成压缩。<br>原因：服务器是Apache+Tomcat集成的，压缩配置不起作用，是因为用户是通过浏览器访问Apache服务器，Apache服务器在转发请求到Tomcat去处理,它俩之间数据传输是通过另外一个连接器(Connector)[<connector port="8009" protocol="AJP/1.3" redirectport="8443" uriencoding="UTF-8">]，但是AJP协议目前貌似还不支持GZIP的配置。</connector></p>
+<p>2.使用pjl-comp-filter配置压缩<br>在项目中导入pjl-comp-filter-1.7.jar，再在web.xml文件中添加<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">filter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">filter-name</span>&gt;</span>CompressingFilter<span class="tag">&lt;/<span class="title">filter-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">filter-class</span>&gt;</span>com.planetj.servlet.filter.compression.CompressingFilter<span class="tag">&lt;/<span class="title">filter-class</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">init-param</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">param-name</span>&gt;</span>compressionThreshold<span class="tag">&lt;/<span class="title">param-name</span>&gt;</span>资源大小超过100B的就被压缩</span><br><span class="line">        <span class="tag">&lt;<span class="title">param-value</span>&gt;</span>100<span class="tag">&lt;/<span class="title">param-value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">init-param</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">init-param</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">param-name</span>&gt;</span>includeContentTypes<span class="tag">&lt;/<span class="title">param-name</span>&gt;</span>启动GZIP压缩的MIME类型</span><br><span class="line">        <span class="tag">&lt;<span class="title">param-value</span>&gt;</span>text/html,text/xml,text/javascript,text/css,text/plain<span class="tag">&lt;/<span class="title">param-value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">init-param</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">filter-mapping</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">filter-name</span>&gt;</span>CompressingFilter<span class="tag">&lt;/<span class="title">filter-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="title">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">filter-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>结果：在本地测试成功，但在服务器上运行结果仍是未被压缩。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/20160125/选课系统前端性能评估和解决方案/">选课系统前端性能评估和解决方案</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Dreammin 的个人博客">Dreammin</a></p>
+        <p><span>发布时间:</span>2016年01月25日 - 13时58分</p>
+        <p><span>最后更新:</span>2016年01月25日 - 15时04分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/20160125/选课系统前端性能评估和解决方案/" title="选课系统前端性能评估和解决方案">http://dreammin.github.com/20160125/选课系统前端性能评估和解决方案/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://dreammin.github.com/20160125/选课系统前端性能评估和解决方案/　　作者: Dreammin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u6027_u80FD_u8BC4_u4F30"><span class="toc-number">1.</span> <span class="toc-text">性能评估</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u8BC4_u4F30_u5185_u5BB9"><span class="toc-number">1.1.</span> <span class="toc-text">评估内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u8BC4_u4F30_u5DE5_u5177"><span class="toc-number">1.2.</span> <span class="toc-text">评估工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u8BC4_u4F30_u7ED3_u679C_u4E0E_u5206_u6790"><span class="toc-number">1.3.</span> <span class="toc-text">评估结果与分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u63D0_u9AD8_u6027_u80FD_u65B9_u6848"><span class="toc-number">2.</span> <span class="toc-text">提高性能方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u542F_u7528_u538B_u7F29"><span class="toc-number">3.</span> <span class="toc-text">启用压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u672C_u5730Tomcat_u542F_u7528_u538B_u7F29"><span class="toc-number">3.1.</span> <span class="toc-text">本地Tomcat启用压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u914D_u7F6ETomcat_u538B_u7F29"><span class="toc-number">3.1.1.</span> <span class="toc-text">配置Tomcat压缩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u6D4B_u8BD5_u538B_u7F29_u7ED3_u679C"><span class="toc-number">3.1.2.</span> <span class="toc-text">测试压缩结果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u672C_u5730_u538B_u7F29_u524D_u540E_u5BF9_u6BD4"><span class="toc-number">3.1.3.</span> <span class="toc-text">本地压缩前后对比</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u670D_u52A1_u5668_u914D_u7F6E_u538B_u7F29"><span class="toc-number">3.2.</span> <span class="toc-text">服务器配置压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Apache_u914D_u7F6E_u538B_u7F29"><span class="toc-number">3.2.1.</span> <span class="toc-text">Apache配置压缩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u670D_u52A1_u5668_u7AEF_u538B_u7F29_u524D_u540E_u5BF9_u6BD4"><span class="toc-number">3.2.2.</span> <span class="toc-text">服务器端压缩前后对比</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u670D_u52A1_u5668_u7AEF_u542F_u52A8_u538B_u7F29_u5176_u4ED6_u65B9_u5F0F"><span class="toc-number">3.2.3.</span> <span class="toc-text">服务器端启动压缩其他方式</span></a></li></ol></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+<div class="share">
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+    <a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+    <a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+    </div>
+    <script>
+        window._bd_share_config={
+            "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+</div>
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/20160125/选课系统前端性能评估和解决方案/">选课系统前端性能评估和解决方案</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 Dreammin
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a>
+            </div>
+        </div>
+        <div class="visit">
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <span id="site-visit" >本站到访数: 
+                    <span id="busuanzi_value_site_uv"></span>
+                </span>
+            </span>
+            <span id="busuanzi_container_page_pv" style='display:none'>
+                <span id="page-visit">, 本页阅读量: 
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+            </span>
+        </div>
+    </div>
+</footer>
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
