@@ -17,12 +17,12 @@ $().ready(function(){})">
 
 $(function(){});
 $().ready(function(){})">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2075673-c80a75964799ca92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2075673-51a43917cc66c7ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2075673-53dfbf9725bc1e9e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2075673-b69fac18d912d123.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2075673-0431759f2fe9fc6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-07-24T11:19:04.442Z">
+<meta property="og:image" content="http://dreammin.github.io/../img/docment加载图一.png">
+<meta property="og:image" content="http://dreammin.github.io/../img/2075673-51a43917cc66c7ab.png">
+<meta property="og:image" content="http://dreammin.github.io/../img/docment加载图二.png">
+<meta property="og:image" content="http://dreammin.github.io/../img/docment加载图三.png">
+<meta property="og:image" content="http://dreammin.github.io/../img/docment加载图四.png">
+<meta property="og:updated_time" content="2016-07-24T11:45:37.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="判断document加载过程的几个不同方法">
 <meta name="twitter:description" content="常用的两种页面加载判断方法1. $(document).ready()该方法jQuery提供的方法，它是当文档结构加载完成时，即形成完整的DOM树时（图片和iframe还没有加载完成）触发。其他几种写法：
@@ -254,7 +254,7 @@ $().ready(function(){})">
 </ul>
 <a id="more"></a>
 <h4 id="2-_window-onload"><a href="#2-_window-onload" class="headerlink" title="2. window.onload"></a>2. window.onload</h4><p>该方法表示当页面元素全部加载完成时（包括图片和iframe的加载）触发。<br>在<code>jQuery</code>中有一个同样的方法：<code>$( window ).load(function() {});</code></p>
-<h4 id="3-_u4E24_u79CD_u65B9_u6CD5_u7684_u6BD4_u8F83"><a href="#3-_u4E24_u79CD_u65B9_u6CD5_u7684_u6BD4_u8F83" class="headerlink" title="3.两种方法的比较"></a>3.两种方法的比较</h4><p><img src="http://upload-images.jianshu.io/upload_images/2075673-c80a75964799ca92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>当在网页上添加以上两个方法后，当页面加载后控制台输出的结果如下：<br><img src="http://upload-images.jianshu.io/upload_images/2075673-51a43917cc66c7ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="3-_u4E24_u79CD_u65B9_u6CD5_u7684_u6BD4_u8F83"><a href="#3-_u4E24_u79CD_u65B9_u6CD5_u7684_u6BD4_u8F83" class="headerlink" title="3.两种方法的比较"></a>3.两种方法的比较</h4><p><img src="/../img/docment加载图一.png" alt=""><br>当在网页上添加以上两个方法后，当页面加载后控制台输出的结果如下：<br><img src="/../img/2075673-51a43917cc66c7ab.png" alt=""></p>
 <h3 id="Html5__u4E2D_u7684_u9875_u9762_u52A0_u8F7D_u65B9_u6CD5"><a href="#Html5__u4E2D_u7684_u9875_u9762_u52A0_u8F7D_u65B9_u6CD5" class="headerlink" title="Html5 中的页面加载方法"></a>Html5 中的页面加载方法</h3><h4 id="1-_readystatechange_u4E8B_u4EF6"><a href="#1-_readystatechange_u4E8B_u4EF6" class="headerlink" title="1. readystatechange事件"></a>1. readystatechange事件</h4><p>支持该事件的：IE、Firfox4+、Opera<br>支持readystatechange事件的每个对象都有一个readyState属性，该属性有5个值：</p>
 <ul>
 <li>uninitialized (未初始化) ：对象尚未初始化</li>
@@ -272,8 +272,8 @@ $().ready(function(){})">
 <blockquote>
 <p>DOMContentLoaded事件在形成完整DOM树之后就会触发，不理会图像、JavaScript文件、CSS文件或其他资源是否已经下载完毕。——《JavaScript高级程序设计》</p>
 </blockquote>
-<p>想看看该事件与前面两种方法的区别，做了一下测试，在html页面中添加了如下代码：<br><img src="http://upload-images.jianshu.io/upload_images/2075673-53dfbf9725bc1e9e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>控制台输出结果：<br><img src="http://upload-images.jianshu.io/upload_images/2075673-b69fac18d912d123.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>由此可以看出DOMContentLoaded事件是在<code>$(document).ready()</code>事件后执行，确实在DOM加载后执行，忽略了图片的加载。<br>但是如果将<code>$(document).ready()</code>写在一个较大的js文件最后，在head中引入到html文件中，最终的控制台输出结果是：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2075673-0431759f2fe9fc6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><strong>这个结果让我觉得DOMContentLoaded并没有忽略JavaScript文件的下载</strong><br>我不知道这么理解是否正确，希望各位大神可以指点一二 ~O(∩_∩)O~</p>
+<p>想看看该事件与前面两种方法的区别，做了一下测试，在html页面中添加了如下代码：<br><img src="/../img/docment加载图二.png" alt=""><br>控制台输出结果：<br><img src="/../img/docment加载图三.png" alt=""><br>由此可以看出DOMContentLoaded事件是在<code>$(document).ready()</code>事件后执行，确实在DOM加载后执行，忽略了图片的加载。<br>但是如果将<code>$(document).ready()</code>写在一个较大的js文件最后，在head中引入到html文件中，最终的控制台输出结果是：</p>
+<p><img src="/../img/docment加载图四.png" alt=""><br><strong>这个结果让我觉得DOMContentLoaded并没有忽略JavaScript文件的下载</strong><br>我不知道这么理解是否正确，希望各位大神可以指点一二 ~O(∩_∩)O~</p>
 
       
     </div>
@@ -285,7 +285,7 @@ $().ready(function(){})">
         <p><span>本文标题:</span><a href="/20160604/判断document加载过程的几个不同方法/">判断document加载过程的几个不同方法</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dreammin 的个人博客">Dreammin</a></p>
         <p><span>发布时间:</span>2016年06月04日 - 16时22分</p>
-        <p><span>最后更新:</span>2016年07月24日 - 19时19分</p>
+        <p><span>最后更新:</span>2016年07月24日 - 19时45分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/20160604/判断document加载过程的几个不同方法/" title="判断document加载过程的几个不同方法">http://dreammin.github.io/20160604/判断document加载过程的几个不同方法/</a>
             <span class="copy-path" data-clipboard-text="原文: http://dreammin.github.io/20160604/判断document加载过程的几个不同方法/　　作者: Dreammin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
