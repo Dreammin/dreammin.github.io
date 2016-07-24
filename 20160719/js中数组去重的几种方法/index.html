@@ -11,8 +11,8 @@
 <meta property="og:url" content="http://dreammin.github.io/20160719/js中数组去重的几种方法/index.html">
 <meta property="og:site_name" content="Dreammin's blog">
 <meta property="og:description" content="方法一：遍历数组元素，若元素在结果数组中不存在，则添加至结果数组中，最终返回结果集，代码如下：123456789function method1(arr)&amp;#123;  var result = [arr[0]];  for (var i = 1; i &amp;lt; arr.length; i++) &amp;#123;    if (result.indexOf(arr[i]) === -1) &amp;#123;">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2075673-de0709f17d7dedba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-07-24T11:17:10.846Z">
+<meta property="og:image" content="http://dreammin.github.io/../img/2075673-de0709f17d7dedba.png">
+<meta property="og:updated_time" content="2016-07-24T11:53:22.194Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js中数组去重的几种方法">
 <meta name="twitter:description" content="方法一：遍历数组元素，若元素在结果数组中不存在，则添加至结果数组中，最终返回结果集，代码如下：123456789function method1(arr)&amp;#123;  var result = [arr[0]];  for (var i = 1; i &amp;lt; arr.length; i++) &amp;#123;    if (result.indexOf(arr[i]) === -1) &amp;#123;">
@@ -241,7 +241,7 @@
 <h3 id="u65B9_u6CD5_u56DB_uFF1A"><a href="#u65B9_u6CD5_u56DB_uFF1A" class="headerlink" title="方法四："></a>方法四：</h3><p>首先定义一个临时的空对象，然后遍历数组元素，若元素在临时对象中不存在，则将其添加到临时对象中，同时也添加至结果数组中，最终返回结果集，代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">method4</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> temp = &#123;&#125;,result = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!temp[arr[i]])&#123;</span><br><span class="line">      temp[arr[i]] = <span class="literal">true</span>;</span><br><span class="line">      result.push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="u6027_u80FD_u6BD4_u8F83_uFF1A"><a href="#u6027_u80FD_u6BD4_u8F83_uFF1A" class="headerlink" title="性能比较："></a>性能比较：</h3><p>使用下列代码产生长度为10000的数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> org = [];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span> ; i &lt; <span class="number">10000</span> ; i++)&#123;</span><br><span class="line">  org.push(<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">10000</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>控制台输出各方法的运行时间：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2075673-de0709f17d7dedba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="控制台输出结果"></p>
+<p><img src="/../img/2075673-de0709f17d7dedba.png" alt="控制台输出结果"></p>
 <p>结果分析：</p>
 <ol>
 <li>使用<code>sort()</code>方法对数组先排序比每次使用<code>indexOf()</code>查找要快</li>
@@ -258,7 +258,7 @@
         <p><span>本文标题:</span><a href="/20160719/js中数组去重的几种方法/">js中数组去重的几种方法</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dreammin 的个人博客">Dreammin</a></p>
         <p><span>发布时间:</span>2016年07月19日 - 16时22分</p>
-        <p><span>最后更新:</span>2016年07月24日 - 19时17分</p>
+        <p><span>最后更新:</span>2016年07月24日 - 19时53分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/20160719/js中数组去重的几种方法/" title="js中数组去重的几种方法">http://dreammin.github.io/20160719/js中数组去重的几种方法/</a>
             <span class="copy-path" data-clipboard-text="原文: http://dreammin.github.io/20160719/js中数组去重的几种方法/　　作者: Dreammin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
