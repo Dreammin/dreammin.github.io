@@ -5,17 +5,15 @@
   
   <title>判断document加载过程的几个不同方法 | Dreammin&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="###常用的两种页面加载判断方法
-####1. $(document).ready()该方法jQuery提供的方法，它是当文档结构加载完成时，即形成完整的DOM树时（图片和iframe还没有加载完成）触发。其他几种写法：
+  <meta name="description" content="常用的两种页面加载判断方法1. $(document).ready()该方法jQuery提供的方法，它是当文档结构加载完成时，即形成完整的DOM树时（图片和iframe还没有加载完成）触发。其他几种写法：
 
 $(function(){});
 $().ready(function(){})">
 <meta property="og:type" content="article">
 <meta property="og:title" content="判断document加载过程的几个不同方法">
-<meta property="og:url" content="http://dreammin.github.com/20160604/判断document加载过程的几个不同方法/index.html">
+<meta property="og:url" content="http://dreammin.github.io/20160604/判断document加载过程的几个不同方法/index.html">
 <meta property="og:site_name" content="Dreammin's blog">
-<meta property="og:description" content="###常用的两种页面加载判断方法
-####1. $(document).ready()该方法jQuery提供的方法，它是当文档结构加载完成时，即形成完整的DOM树时（图片和iframe还没有加载完成）触发。其他几种写法：
+<meta property="og:description" content="常用的两种页面加载判断方法1. $(document).ready()该方法jQuery提供的方法，它是当文档结构加载完成时，即形成完整的DOM树时（图片和iframe还没有加载完成）触发。其他几种写法：
 
 $(function(){});
 $().ready(function(){})">
@@ -24,11 +22,10 @@ $().ready(function(){})">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2075673-53dfbf9725bc1e9e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2075673-b69fac18d912d123.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2075673-0431759f2fe9fc6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-07-24T08:33:43.122Z">
+<meta property="og:updated_time" content="2016-07-24T11:19:04.442Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="判断document加载过程的几个不同方法">
-<meta name="twitter:description" content="###常用的两种页面加载判断方法
-####1. $(document).ready()该方法jQuery提供的方法，它是当文档结构加载完成时，即形成完整的DOM树时（图片和iframe还没有加载完成）触发。其他几种写法：
+<meta name="twitter:description" content="常用的两种页面加载判断方法1. $(document).ready()该方法jQuery提供的方法，它是当文档结构加载完成时，即形成完整的DOM树时（图片和iframe还没有加载完成）触发。其他几种写法：
 
 $(function(){});
 $().ready(function(){})">
@@ -250,17 +247,15 @@ $().ready(function(){})">
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>###常用的两种页面加载判断方法</p>
-<p>####1. $(document).ready()<br>该方法<code>jQuery</code>提供的方法，它是当文档结构加载完成时，即形成完整的DOM树时（图片和iframe还没有加载完成）触发。<br>其他几种写法：</p>
+        <h3 id="u5E38_u7528_u7684_u4E24_u79CD_u9875_u9762_u52A0_u8F7D_u5224_u65AD_u65B9_u6CD5"><a href="#u5E38_u7528_u7684_u4E24_u79CD_u9875_u9762_u52A0_u8F7D_u5224_u65AD_u65B9_u6CD5" class="headerlink" title="常用的两种页面加载判断方法"></a>常用的两种页面加载判断方法</h3><h4 id="1-__24_28document_29-ready_28_29"><a href="#1-__24_28document_29-ready_28_29" class="headerlink" title="1. $(document).ready()"></a>1. $(document).ready()</h4><p>该方法<code>jQuery</code>提供的方法，它是当文档结构加载完成时，即形成完整的DOM树时（图片和iframe还没有加载完成）触发。<br>其他几种写法：</p>
 <ul>
 <li><code>$(function(){});</code></li>
 <li><code>$().ready(function(){})</code></li>
 </ul>
 <a id="more"></a>
-<p>####2. window.onload<br>该方法表示当页面元素全部加载完成时（包括图片和iframe的加载）触发。<br>在<code>jQuery</code>中有一个同样的方法：<code>$( window ).load(function() {});</code></p>
-<p>####3.两种方法的比较<br><img src="http://upload-images.jianshu.io/upload_images/2075673-c80a75964799ca92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>当在网页上添加以上两个方法后，当页面加载后控制台输出的结果如下：<br><img src="http://upload-images.jianshu.io/upload_images/2075673-51a43917cc66c7ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>###Html5 中的页面加载方法</p>
-<p>####1. readystatechange事件<br>支持该事件的：IE、Firfox4+、Opera<br>支持readystatechange事件的每个对象都有一个readyState属性，该属性有5个值：</p>
+<h4 id="2-_window-onload"><a href="#2-_window-onload" class="headerlink" title="2. window.onload"></a>2. window.onload</h4><p>该方法表示当页面元素全部加载完成时（包括图片和iframe的加载）触发。<br>在<code>jQuery</code>中有一个同样的方法：<code>$( window ).load(function() {});</code></p>
+<h4 id="3-_u4E24_u79CD_u65B9_u6CD5_u7684_u6BD4_u8F83"><a href="#3-_u4E24_u79CD_u65B9_u6CD5_u7684_u6BD4_u8F83" class="headerlink" title="3.两种方法的比较"></a>3.两种方法的比较</h4><p><img src="http://upload-images.jianshu.io/upload_images/2075673-c80a75964799ca92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>当在网页上添加以上两个方法后，当页面加载后控制台输出的结果如下：<br><img src="http://upload-images.jianshu.io/upload_images/2075673-51a43917cc66c7ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="Html5__u4E2D_u7684_u9875_u9762_u52A0_u8F7D_u65B9_u6CD5"><a href="#Html5__u4E2D_u7684_u9875_u9762_u52A0_u8F7D_u65B9_u6CD5" class="headerlink" title="Html5 中的页面加载方法"></a>Html5 中的页面加载方法</h3><h4 id="1-_readystatechange_u4E8B_u4EF6"><a href="#1-_readystatechange_u4E8B_u4EF6" class="headerlink" title="1. readystatechange事件"></a>1. readystatechange事件</h4><p>支持该事件的：IE、Firfox4+、Opera<br>支持readystatechange事件的每个对象都有一个readyState属性，该属性有5个值：</p>
 <ul>
 <li>uninitialized (未初始化) ：对象尚未初始化</li>
 <li>loading (正在加载) ：对象正在加载</li>
@@ -273,7 +268,7 @@ $().ready(function(){})">
 <p>在与load事件一起使用时，无法预测两个事件触发的先后顺序。在包含较多或较大的外部资源的页面中，会在load事件触发之前先进入交互阶段;而在包含较少或较小的外部资料的页面中，则很难说readystatechange事件会发生在load事件前面。</p>
 </blockquote>
 <p>运用事例代码：<br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"readystatechange"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (<span class="built_in">document</span>.readyState == <span class="string">"complete"</span>) &#123;</span><br><span class="line">     <span class="built_in">console</span>.log(<span class="string">"readystatechange-complete"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>####2. DOMContentLoaded事件<br>支持该事件的：IE9+、Firefox、Chrome、Safari3.1+、Opera9+</p>
+<h4 id="2-_DOMContentLoaded_u4E8B_u4EF6"><a href="#2-_DOMContentLoaded_u4E8B_u4EF6" class="headerlink" title="2. DOMContentLoaded事件"></a>2. DOMContentLoaded事件</h4><p>支持该事件的：IE9+、Firefox、Chrome、Safari3.1+、Opera9+</p>
 <blockquote>
 <p>DOMContentLoaded事件在形成完整DOM树之后就会触发，不理会图像、JavaScript文件、CSS文件或其他资源是否已经下载完毕。——《JavaScript高级程序设计》</p>
 </blockquote>
@@ -290,10 +285,10 @@ $().ready(function(){})">
         <p><span>本文标题:</span><a href="/20160604/判断document加载过程的几个不同方法/">判断document加载过程的几个不同方法</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dreammin 的个人博客">Dreammin</a></p>
         <p><span>发布时间:</span>2016年06月04日 - 16时22分</p>
-        <p><span>最后更新:</span>2016年07月24日 - 16时33分</p>
+        <p><span>最后更新:</span>2016年07月24日 - 19时19分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/20160604/判断document加载过程的几个不同方法/" title="判断document加载过程的几个不同方法">http://dreammin.github.com/20160604/判断document加载过程的几个不同方法/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://dreammin.github.com/20160604/判断document加载过程的几个不同方法/　　作者: Dreammin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/20160604/判断document加载过程的几个不同方法/" title="判断document加载过程的几个不同方法">http://dreammin.github.io/20160604/判断document加载过程的几个不同方法/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://dreammin.github.io/20160604/判断document加载过程的几个不同方法/　　作者: Dreammin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -326,7 +321,7 @@ $().ready(function(){})">
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#u5E38_u7528_u7684_u4E24_u79CD_u9875_u9762_u52A0_u8F7D_u5224_u65AD_u65B9_u6CD5"><span class="toc-number">1.</span> <span class="toc-text">常用的两种页面加载判断方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-__24_28document_29-ready_28_29"><span class="toc-number">1.1.</span> <span class="toc-text">1. $(document).ready()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-_window-onload"><span class="toc-number">1.2.</span> <span class="toc-text">2. window.onload</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-_u4E24_u79CD_u65B9_u6CD5_u7684_u6BD4_u8F83"><span class="toc-number">1.3.</span> <span class="toc-text">3.两种方法的比较</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Html5__u4E2D_u7684_u9875_u9762_u52A0_u8F7D_u65B9_u6CD5"><span class="toc-number">2.</span> <span class="toc-text">Html5 中的页面加载方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-_readystatechange_u4E8B_u4EF6"><span class="toc-number">2.1.</span> <span class="toc-text">1. readystatechange事件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-_DOMContentLoaded_u4E8B_u4EF6"><span class="toc-number">2.2.</span> <span class="toc-text">2. DOMContentLoaded事件</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {

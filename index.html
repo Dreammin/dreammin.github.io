@@ -8,7 +8,7 @@
   <meta name="description" content="好好吃饭～好好睡觉～好好学习～">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Dreammin's blog">
-<meta property="og:url" content="http://dreammin.github.com/index.html">
+<meta property="og:url" content="http://dreammin.github.io/index.html">
 <meta property="og:site_name" content="Dreammin's blog">
 <meta property="og:description" content="好好吃饭～好好睡觉～好好学习～">
 <meta name="twitter:card" content="summary">
@@ -230,7 +230,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>###方法一：<br>遍历数组元素，若元素在结果数组中不存在，则添加至结果数组中，最终返回结果集，代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">method1</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> result = [arr[<span class="number">0</span>]];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (result.indexOf(arr[i]) === -<span class="number">1</span>) &#123;</span><br><span class="line">      result.push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+              <h3 id="u65B9_u6CD5_u4E00_uFF1A"><a href="#u65B9_u6CD5_u4E00_uFF1A" class="headerlink" title="方法一："></a>方法一：</h3><p>遍历数组元素，若元素在结果数组中不存在，则添加至结果数组中，最终返回结果集，代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">method1</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> result = [arr[<span class="number">0</span>]];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (result.indexOf(arr[i]) === -<span class="number">1</span>) &#123;</span><br><span class="line">      result.push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
           
       
     </div>
@@ -345,7 +345,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>在学习前端的过程中经常看到这样一个问题：当你在浏览器中输入url后发生了什么？下面是个人学习过程中的总结，供个人复习使用，如有理解不正确或不足的地方希望大家指出。<br>先上一张脑图：<br><img src="http://upload-images.jianshu.io/upload_images/2075673-3afda32a13a68c6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="浏览器中输入url后发生了什么"></p>
+              <p>在学习前端的过程中经常看到这样一个问题：当你在浏览器中输入url后发生了什么？下面是个人学习过程中的总结，供个人复习使用，如有理解不正确或不足的地方希望大家指出。<br>先上一张脑图：<br><img src="/../img/url图一.png" alt="浏览器中输入url后发生了什么"></p>
           
       
     </div>
@@ -402,7 +402,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>###基本数据类型检测<br>返回类型有：number, boolean, string, undefined, object, function<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">2</span>;                        <span class="built_in">console</span>.log(<span class="keyword">typeof</span> i);         <span class="comment">//number</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="literal">true</span>;                     <span class="built_in">console</span>.log(<span class="keyword">typeof</span> b);         <span class="comment">//boolean</span></span><br><span class="line"><span class="keyword">var</span> s = <span class="string">"hello"</span>;                  <span class="built_in">console</span>.log(<span class="keyword">typeof</span> s);         <span class="comment">//string</span></span><br><span class="line"><span class="keyword">var</span> n = <span class="literal">null</span>;                     <span class="built_in">console</span>.log(<span class="keyword">typeof</span> n);         <span class="comment">//object</span></span><br><span class="line"><span class="keyword">var</span> u;                            <span class="built_in">console</span>.log(<span class="keyword">typeof</span> u);         <span class="comment">//undefined</span></span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();             <span class="built_in">console</span>.log(<span class="keyword">typeof</span> o);         <span class="comment">//object</span></span><br></pre></td></tr></table></figure></p>
+              <h3 id="u57FA_u672C_u6570_u636E_u7C7B_u578B_u68C0_u6D4B"><a href="#u57FA_u672C_u6570_u636E_u7C7B_u578B_u68C0_u6D4B" class="headerlink" title="基本数据类型检测"></a>基本数据类型检测</h3><p>返回类型有：number, boolean, string, undefined, object, function<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">2</span>;                        <span class="built_in">console</span>.log(<span class="keyword">typeof</span> i);         <span class="comment">//number</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="literal">true</span>;                     <span class="built_in">console</span>.log(<span class="keyword">typeof</span> b);         <span class="comment">//boolean</span></span><br><span class="line"><span class="keyword">var</span> s = <span class="string">"hello"</span>;                  <span class="built_in">console</span>.log(<span class="keyword">typeof</span> s);         <span class="comment">//string</span></span><br><span class="line"><span class="keyword">var</span> n = <span class="literal">null</span>;                     <span class="built_in">console</span>.log(<span class="keyword">typeof</span> n);         <span class="comment">//object</span></span><br><span class="line"><span class="keyword">var</span> u;                            <span class="built_in">console</span>.log(<span class="keyword">typeof</span> u);         <span class="comment">//undefined</span></span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();             <span class="built_in">console</span>.log(<span class="keyword">typeof</span> o);         <span class="comment">//object</span></span><br></pre></td></tr></table></figure></p>
           
       
     </div>
@@ -467,8 +467,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>###常用的两种页面加载判断方法</p>
-<p>####1. $(document).ready()<br>该方法<code>jQuery</code>提供的方法，它是当文档结构加载完成时，即形成完整的DOM树时（图片和iframe还没有加载完成）触发。<br>其他几种写法：</p>
+              <h3 id="u5E38_u7528_u7684_u4E24_u79CD_u9875_u9762_u52A0_u8F7D_u5224_u65AD_u65B9_u6CD5"><a href="#u5E38_u7528_u7684_u4E24_u79CD_u9875_u9762_u52A0_u8F7D_u5224_u65AD_u65B9_u6CD5" class="headerlink" title="常用的两种页面加载判断方法"></a>常用的两种页面加载判断方法</h3><h4 id="1-__24_28document_29-ready_28_29"><a href="#1-__24_28document_29-ready_28_29" class="headerlink" title="1. $(document).ready()"></a>1. $(document).ready()</h4><p>该方法<code>jQuery</code>提供的方法，它是当文档结构加载完成时，即形成完整的DOM树时（图片和iframe还没有加载完成）触发。<br>其他几种写法：</p>
 <ul>
 <li><code>$(function(){});</code></li>
 <li><code>$().ready(function(){})</code></li>
@@ -529,8 +528,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>##创建数组</p>
-<ul>
+              <h2 id="u521B_u5EFA_u6570_u7EC4"><a href="#u521B_u5EFA_u6570_u7EC4" class="headerlink" title="创建数组"></a>创建数组</h2><ul>
 <li><p>使用Array构造函数</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Array</span>()</span><br><span class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">5</span>);  <span class="comment">//创建长度为5的数组</span></span><br><span class="line"><span class="keyword">var</span> c = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>);</span><br></pre></td></tr></table></figure>
 </li>
@@ -594,7 +592,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>###在<a href="http://www.w3school.com.cn/jsref/jsref_parseInt.asp">w3School</a>中定义<br><strong>定义和用法</strong><br>parseInt() 函数可解析一个字符串，并返回一个整数。<br><strong>语法</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(string, radix)</span><br></pre></td></tr></table></figure></p>
+              <h3 id="u5728w3School_u4E2D_u5B9A_u4E49"><a href="#u5728w3School_u4E2D_u5B9A_u4E49" class="headerlink" title="在w3School中定义"></a>在<a href="http://www.w3school.com.cn/jsref/jsref_parseInt.asp">w3School</a>中定义</h3><p><strong>定义和用法</strong><br>parseInt() 函数可解析一个字符串，并返回一个整数。<br><strong>语法</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(string, radix)</span><br></pre></td></tr></table></figure></p>
 <table>
 <thead>
 <tr>
