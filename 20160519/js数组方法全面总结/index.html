@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>js数组方法全面总结 | Dreammin&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##创建数组
+
+使用Array构造函数
+123var a = new Array()var b = new Array(5);  //创建长度为5的数组var c = new Array(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;);
+
+使用数组字面量表示法
+123var a = [];var b = [5];      //创建一个含数字5的数组var c = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;];">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js数组方法全面总结">
+<meta property="og:url" content="http://dreammin.github.com/20160519/js数组方法全面总结/index.html">
+<meta property="og:site_name" content="Dreammin's blog">
+<meta property="og:description" content="##创建数组
+
+使用Array构造函数
+123var a = new Array()var b = new Array(5);  //创建长度为5的数组var c = new Array(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;);
+
+使用数组字面量表示法
+123var a = [];var b = [5];      //创建一个含数字5的数组var c = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;];">
+<meta property="og:updated_time" content="2016-07-24T08:33:09.740Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js数组方法全面总结">
+<meta name="twitter:description" content="##创建数组
+
+使用Array构造函数
+123var a = new Array()var b = new Array(5);  //创建长度为5的数组var c = new Array(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;);
+
+使用数组字面量表示法
+123var a = [];var b = [5];      //创建一个含数字5的数组var c = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;];">
+  
+    <link rel="alternative" href="/atom.xml" title="Dreammin&#39;s blog" type="application/atom+xml">
+  
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/">Dreammin</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">好好吃饭～好好睡觉～好好学习～</p>
+        
+        
+        <form><input type="text" class="search" placeholder=" Search..."></form>
+                
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="/1553085243@qq.com" title="Email"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/Dreammin" title="GitHub"></a></li>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/compress/" style="font-size: 10px;">compress</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/pageSpeed/" style="font-size: 10px;">pageSpeed</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://panzhihui.github.io">Spanda</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Dreammin</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img lazy-src="/img/avatar.jpg" class="js-avatar">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Dreammin</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">好好吃饭～好好睡觉～好好学习～</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="/1553085243@qq.com" title="Email"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/Dreammin" title="GitHub"></a></li>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-js数组方法全面总结" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160519/js数组方法全面总结/" class="article-date">
+      <time datetime="2016-05-19T08:21:14.000Z" itemprop="datePublished">2016-05-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js数组方法全面总结
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>##创建数组</p>
+<ul>
+<li><p>使用Array构造函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Array</span>()</span><br><span class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">5</span>);  <span class="comment">//创建长度为5的数组</span></span><br><span class="line"><span class="keyword">var</span> c = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用数组字面量表示法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [];</span><br><span class="line"><span class="keyword">var</span> b = [<span class="number">5</span>];      <span class="comment">//创建一个含数字5的数组</span></span><br><span class="line"><span class="keyword">var</span> c = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>];</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<p>##数组属性<br><code>length</code>表示数组的长度<br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span>,<span class="string">"black"</span>];</span><br><span class="line">colors.length                   <span class="comment">//4</span></span><br></pre></td></tr></table></figure></p>
+<p><code>length</code>属性并不是只读的，通过设置该值可以从数组末尾删除项或向数组中添加项<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span>,<span class="string">"black"</span>];</span><br><span class="line">colors.length = <span class="number">2</span>;        <span class="comment">//colors:["red","green"]</span></span><br><span class="line">colors.length = <span class="number">4</span>;        <span class="comment">//colors:["red","green",undefined,undefined]</span></span><br></pre></td></tr></table></figure></p>
+<p>##数组方法</p>
+<ul>
+<li><p>####栈、队列方法</p>
+<ol>
+<li><p><code>push(item...)</code> 向数组中添加元素，返回<strong>修改后数组的长度</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">numbers.push(<span class="number">5</span>)           <span class="comment">//5       numbers:[1,2,3,4,5]</span></span><br><span class="line">numbers.push(<span class="number">6</span>,<span class="number">7</span>)         <span class="comment">//7       numbers:[1,2,3,4,5,6,7]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>pop()</code> 从数组末尾移除一项，减少数组的长度，返回<strong>移除的项</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">numbers.pop()           <span class="comment">//4         numbers:[1,2,3]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>unshift(item...)</code> 向数组前端添加任意项，返回<strong> <em>修改后数组的长度</em> </strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">numbers.unshift(<span class="number">5</span>)           <span class="comment">//5       numbers:[5,1,2,3,4]</span></span><br><span class="line">numbers.unshift(<span class="number">6</span>,<span class="number">7</span>)         <span class="comment">//7       numbers:[6,7,5,1,2,3,4]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>shift()</code> 移除数组第一项，减少数组的长度，返回<strong>移除的项</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">numbers.shift()           <span class="comment">//1         numbers:[2,3,4]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>####排序方法</p>
+<ol>
+<li><p><code>reverse()</code>反转数组项的顺序，改变原数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">numbers.reverse()          <span class="comment">//[4,3,2,1]         numbers:[4,3,2,1]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>sort()</code>默认情况下，即无参数情况，<code>sort()</code>方法按升序排列数组。该方法会调用每个数组项的<code>tostring()</code>方法，然后比较字符串，<strong>因此即使数组中每一项都是数值，<code>sort()</code>方法比较的也是字符串</strong>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">15</span>,<span class="number">5</span>,<span class="number">10</span>];</span><br><span class="line">numbers.sort()          <span class="comment">//[1, 10, 15, 5]         numbers:[1, 10, 15, 5]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<p><code>sort()</code>方法可以接受一个比较函数作为参数。其中比较函数接受两个参数，如果两个参数排序不需要交换位置则返回<strong>负数</strong>，如果需要交换位置则返回一个<strong>正数</strong>，如果两个参数相等则返回<strong>0</strong>。<br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">15</span>,<span class="number">5</span>,<span class="number">10</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">val1,val2</span>)</span>&#123;</span><br><span class="line">       <span class="keyword">if</span>(val1 &lt; val2)&#123;</span><br><span class="line">          <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">else</span> <span class="keyword">if</span>(val1 &gt; val2)&#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">else</span>&#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="number">0</span>;   </span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br><span class="line"> numbers.sort(compare)          <span class="comment">//[1, 5, 10,15]         numbers:[1, 5, 10,15]</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>####操作、位置方法</p>
+<ol>
+<li><p><code>concat()</code>其参数可以是一个或多个项，也可以是一个或多个数组。创建一个当前数组的副本，然后在数组末尾添加参数项，并返回<strong>新的数组</strong>，原数组不变</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">numbers.concat(<span class="number">5</span>,[<span class="number">6</span>,<span class="number">7</span>])          <span class="comment">//[1,2,3,4,5,6,7]         numbers:[1,2,3,4]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>slice()</code>获取截取数组，如果是一个参数，则获取从该参数位置开始到数组结束所有值，如果有两个参数，则获取从起始值位置到结束值位置的值（不包括结束值位置项），返回<strong>新的数组</strong>。原数组不变<br><em>如果结束值小于起始位置则返回空数组。</em></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"> numbers.slice(<span class="number">2</span>)          <span class="comment">//[3,4]         numbers:[1,2,3,4]</span></span><br><span class="line">numbers.slice(<span class="number">1</span>,<span class="number">3</span>)       <span class="comment">//[2,3]         numbers:[1,2,3,4]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<p><strong> 注意：</strong> <em>  如果参数中存在负数，则将参数值加上数组长度来计算。如：</em><br>   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"> numbers.slice(-<span class="number">1</span>)          <span class="comment">//[4]         numbers:[1,2,3,4]</span></span><br><span class="line">numbers.slice(-<span class="number">4</span>,-<span class="number">2</span>)       <span class="comment">//[1,2]         numbers:[1,2,3,4]</span></span><br></pre></td></tr></table></figure></p>
+<ol>
+<li><p><code>splice()</code> 返回<strong>删除项组成的数组</strong>，原数组被改变</p>
+<ul>
+<li>删除 ：从指定位置删除指定项数<br>  <code>splice(0,3)</code> 表示删除数组的[0][1][2]位置的三项</li>
+<li>插入 : 从指定位置删除0项，再添加项<br>  <code>splice(1,0,3,4)</code>  表示从数组的第[1]项开始插入3，4两个值</li>
+<li>替换 ：从指定位置删除指定项数，再添加项<br>  <code>splice(1,2,3,4)</code>  表示从数组[1][2]位置上的值被替换成3，4两个值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">numbers.splice(<span class="number">1</span>,<span class="number">2</span>)              <span class="comment">//[2,3]         numbers:[1,4]</span></span><br><span class="line">numbers.splice(<span class="number">1</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)      <span class="comment">//[]         numbers:[1,2,3,4,5,4] </span></span><br><span class="line">numbers.splice(<span class="number">2</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>)      <span class="comment">//[3,4]         numbers:[1,2,4,5,5,4]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>indexOf()</code>从前向后查找，接受两个参数：查找的项和查找的起点位置（可选），默认从数组的起始位置向后查找，返回<strong>索引值</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>];</span><br><span class="line">numbers.indexOf(<span class="number">2</span>)              <span class="comment">//1        numbers:[1,2,3,4,4,5,3,1,2]</span></span><br><span class="line">numbers.indexOf(<span class="number">2</span>,<span class="number">4</span>)              <span class="comment">//8       numbers:[1,2,3,4,4,5,3,1,2]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>lastIndexOf()</code>从后向前查找，接受两个参数：查找的项和查找的起点位置（可选），默认从数组的结束位置向前查找，返回<strong>索引值</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>];</span><br><span class="line">numbers.lastIndexOf(<span class="number">2</span>)              <span class="comment">//8        numbers:[1,2,3,4,4,5,3,1,2]</span></span><br><span class="line">numbers.lastIndexOf(<span class="number">4</span>,<span class="number">3</span>)            <span class="comment">//3        numbers:[1,2,3,4,4,5,3,1,2], 从[3]位向前查找</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><p>####遍历方法</p>
+<ol>
+<li><p><code>every(fn)</code>对数组中的每一项运行给定的函数，如果该函数对每一项都返回true,则返回true</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"> numbers.every(<span class="function"><span class="keyword">function</span>(<span class="params">item,index,array</span>)</span>&#123;</span><br><span class="line">       <span class="keyword">return</span> (item&gt;<span class="number">0</span>);</span><br><span class="line"> &#125;)                                                          <span class="comment">//true       </span></span><br><span class="line">numbers.every(<span class="function"><span class="keyword">function</span>(<span class="params">item,index,array</span>)</span>&#123;</span><br><span class="line">       <span class="keyword">return</span> (item&gt;<span class="number">2</span>);</span><br><span class="line"> &#125;)                                                         <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>filter(fn)</code>对数组中的每一项运行给定的函数，返回该函数会返回true的项组成的数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">numbers.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item,index,array</span>)</span>&#123;</span><br><span class="line">      <span class="keyword">return</span> (item&gt;<span class="number">2</span>);</span><br><span class="line">&#125;)                                                          <span class="comment">//[3,4,5]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>forEach(fn)</code>对数组中的每一项运行给定的函数，没有返回值</p>
+</li>
+<li><p><code>map(fn)</code>对数组中的每一项运行给定的函数，返回每次函数调用的结果组成的数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">numbers.map(<span class="function"><span class="keyword">function</span>(<span class="params">item,index,array</span>)</span>&#123;</span><br><span class="line">      <span class="keyword">return</span> (item+<span class="number">10</span>);</span><br><span class="line">&#125;)                                                          <span class="comment">//[11,12,13,14,15]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>some(fn)</code>对数组中的每一项运行给定的函数，如果该函数对任一项返回true,则返回true</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">numbers.some(<span class="function"><span class="keyword">function</span>(<span class="params">item,index,array</span>)</span>&#123;</span><br><span class="line">      <span class="keyword">return</span> (item&gt;<span class="number">3</span>);</span><br><span class="line">&#125;)                                                          <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>####归并方法<br>以下两个方法都接受两个参数，一个是在数组每一项上调用的函数，另一个可选参数是作为归并基础的初始值。其中作为参数的函数接受4个参数：前一个值、当前值、项和索引和数组对象。这个函数返回的任何值都会作为第一个参数自动传给下一项</p>
+<ol>
+<li><code>reduce(fn)</code> 从头开始遍历</li>
+<li><code>reduceRight(ffn)</code>从尾开始遍历<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">var</span> numbers= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">  numbers.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">pre,cur,index,array</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> pre+cur;</span><br><span class="line">  &#125;)                                               <span class="comment">//15   对数组求和</span></span><br><span class="line">numbers.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">pre,cur,index,array</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> pre+cur;</span><br><span class="line">  &#125;,<span class="number">10</span>)                                           <span class="comment">//25   以10为基数对求数组求和</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/20160519/js数组方法全面总结/">js数组方法全面总结</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Dreammin 的个人博客">Dreammin</a></p>
+        <p><span>发布时间:</span>2016年05月19日 - 16时21分</p>
+        <p><span>最后更新:</span>2016年07月24日 - 16时33分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/20160519/js数组方法全面总结/" title="js数组方法全面总结">http://dreammin.github.com/20160519/js数组方法全面总结/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://dreammin.github.com/20160519/js数组方法全面总结/　　作者: Dreammin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/20160604/判断document加载过程的几个不同方法/">
+                    判断document加载过程的几个不同方法
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/20160515/js中的parseInt方法总结/">
+                    js中的parseInt方法总结
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+<div class="share">
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+    <a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+    <a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+    </div>
+    <script>
+        window._bd_share_config={
+            "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+</div>
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/20160604/判断document加载过程的几个不同方法/" title="上一篇: 判断document加载过程的几个不同方法">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/20160515/js中的parseInt方法总结/" title="下一篇: js中的parseInt方法总结">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/20160719/js中数组去重的几种方法/">js中数组去重的几种方法</a></li><li class="post-list-item"><a class="post-list-link" href="/20160715/关于Meta标签/">关于Meta标签</a></li><li class="post-list-item"><a class="post-list-link" href="/20160714/浏览器中输入url后发生了什么/">浏览器中输入url后发生了什么</a></li><li class="post-list-item"><a class="post-list-link" href="/20160704/javascript中安全的类型检测/">javascript中安全的类型检测</a></li><li class="post-list-item"><a class="post-list-link" href="/20160604/判断document加载过程的几个不同方法/">判断document加载过程的几个不同方法</a></li><li class="post-list-item"><a class="post-list-link" href="/20160519/js数组方法全面总结/">js数组方法全面总结</a></li><li class="post-list-item"><a class="post-list-link" href="/20160515/js中的parseInt方法总结/">js中的parseInt方法总结</a></li><li class="post-list-item"><a class="post-list-link" href="/20160125/选课系统前端性能评估和解决方案/">选课系统前端性能评估和解决方案</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 Dreammin
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a>
+            </div>
+        </div>
+        <div class="visit">
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <span id="site-visit" >本站到访数: 
+                    <span id="busuanzi_value_site_uv"></span>
+                </span>
+            </span>
+            <span id="busuanzi_container_page_pv" style='display:none'>
+                <span id="page-visit">, 本页阅读量: 
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+            </span>
+        </div>
+    </div>
+</footer>
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

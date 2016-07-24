@@ -133,7 +133,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/compress/" style="font-size: 10px;">compress</a> <a href="/tags/pageSpeed/" style="font-size: 10px;">pageSpeed</a>
+                        <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/compress/" style="font-size: 10px;">compress</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/pageSpeed/" style="font-size: 10px;">pageSpeed</a>
                     </div>
                 </section>
                 
@@ -202,6 +202,445 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-js中数组去重的几种方法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160719/js中数组去重的几种方法/" class="article-date">
+      <time datetime="2016-07-19T08:22:17.000Z" itemprop="datePublished">2016-07-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160719/js中数组去重的几种方法/">js中数组去重的几种方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>###方法一：<br>遍历数组元素，若元素在结果数组中不存在，则添加至结果数组中，最终返回结果集，代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">method1</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> result = [arr[<span class="number">0</span>]];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (result.indexOf(arr[i]) === -<span class="number">1</span>) &#123;</span><br><span class="line">      result.push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a  href="/20160719/js中数组去重的几种方法/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-关于Meta标签" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160715/关于Meta标签/" class="article-date">
+      <time datetime="2016-07-15T08:22:29.000Z" itemprop="datePublished">2016-07-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160715/关于Meta标签/">关于Meta标签</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>meta主要分为两大部分：<strong>http-equiv</strong>（http相关内容）和<strong>name</strong>（页面描述信息）。下面详细介绍一下常用的内容:</p>
+<p>###http-equiv<br>使用带有 http-equiv 属性的 <meta> 标签时，服务器将把名称/值对添加到发送给浏览器的内容头部（http响应报文头部）。</p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a  href="/20160715/关于Meta标签/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-浏览器中输入url后发生了什么" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160714/浏览器中输入url后发生了什么/" class="article-date">
+      <time datetime="2016-07-14T08:22:40.000Z" itemprop="datePublished">2016-07-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160714/浏览器中输入url后发生了什么/">浏览器中输入url后发生了什么</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>在学习前端的过程中经常看到这样一个问题：当你在浏览器中输入url后发生了什么？下面是个人学习过程中的总结，供个人复习使用，如有理解不正确或不足的地方希望大家指出。<br>先上一张脑图：<br><img src="http://upload-images.jianshu.io/upload_images/2075673-3afda32a13a68c6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="浏览器中输入url后发生了什么"></p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a  href="/20160714/浏览器中输入url后发生了什么/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-javascript中安全的类型检测" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160704/javascript中安全的类型检测/" class="article-date">
+      <time datetime="2016-07-04T08:14:00.000Z" itemprop="datePublished">2016-07-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160704/javascript中安全的类型检测/">javascript中安全的类型检测</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>###基本数据类型检测<br>返回类型有：number, boolean, string, undefined, object, function<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">2</span>;                        <span class="built_in">console</span>.log(<span class="keyword">typeof</span> i);         <span class="comment">//number</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="literal">true</span>;                     <span class="built_in">console</span>.log(<span class="keyword">typeof</span> b);         <span class="comment">//boolean</span></span><br><span class="line"><span class="keyword">var</span> s = <span class="string">"hello"</span>;                  <span class="built_in">console</span>.log(<span class="keyword">typeof</span> s);         <span class="comment">//string</span></span><br><span class="line"><span class="keyword">var</span> n = <span class="literal">null</span>;                     <span class="built_in">console</span>.log(<span class="keyword">typeof</span> n);         <span class="comment">//object</span></span><br><span class="line"><span class="keyword">var</span> u;                            <span class="built_in">console</span>.log(<span class="keyword">typeof</span> u);         <span class="comment">//undefined</span></span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();             <span class="built_in">console</span>.log(<span class="keyword">typeof</span> o);         <span class="comment">//object</span></span><br></pre></td></tr></table></figure></p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/前端学习/">前端学习</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/20160704/javascript中安全的类型检测/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-判断document加载过程的几个不同方法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160604/判断document加载过程的几个不同方法/" class="article-date">
+      <time datetime="2016-06-04T08:22:55.000Z" itemprop="datePublished">2016-06-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160604/判断document加载过程的几个不同方法/">判断document加载过程的几个不同方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>###常用的两种页面加载判断方法</p>
+<p>####1. $(document).ready()<br>该方法<code>jQuery</code>提供的方法，它是当文档结构加载完成时，即形成完整的DOM树时（图片和iframe还没有加载完成）触发。<br>其他几种写法：</p>
+<ul>
+<li><code>$(function(){});</code></li>
+<li><code>$().ready(function(){})</code></li>
+</ul>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a  href="/20160604/判断document加载过程的几个不同方法/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-js数组方法全面总结" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160519/js数组方法全面总结/" class="article-date">
+      <time datetime="2016-05-19T08:21:14.000Z" itemprop="datePublished">2016-05-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160519/js数组方法全面总结/">js数组方法全面总结</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>##创建数组</p>
+<ul>
+<li><p>使用Array构造函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Array</span>()</span><br><span class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">5</span>);  <span class="comment">//创建长度为5的数组</span></span><br><span class="line"><span class="keyword">var</span> c = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用数组字面量表示法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [];</span><br><span class="line"><span class="keyword">var</span> b = [<span class="number">5</span>];      <span class="comment">//创建一个含数字5的数组</span></span><br><span class="line"><span class="keyword">var</span> c = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>];</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a  href="/20160519/js数组方法全面总结/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-js中的parseInt方法总结" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160515/js中的parseInt方法总结/" class="article-date">
+      <time datetime="2016-05-15T08:21:58.000Z" itemprop="datePublished">2016-05-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20160515/js中的parseInt方法总结/">js中的parseInt方法总结</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>###在<a href="http://www.w3school.com.cn/jsref/jsref_parseInt.asp">w3School</a>中定义<br><strong>定义和用法</strong><br>parseInt() 函数可解析一个字符串，并返回一个整数。<br><strong>语法</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(string, radix)</span><br></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>string</em></td>
+<td style="text-align:center">必需。要被解析的字符串。</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>radix</em></td>
+<td style="text-align:center">可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。</td>
+</tr>
+</tbody>
+</table>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a  href="/20160515/js中的parseInt方法总结/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
   
     <article id="post-选课系统前端性能评估和解决方案" class="article article-type-post" itemscope itemprop="blogPost">
   

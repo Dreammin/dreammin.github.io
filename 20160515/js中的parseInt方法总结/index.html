@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>js中的parseInt方法总结 | Dreammin&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="###在w3School中定义定义和用法parseInt() 函数可解析一个字符串，并返回一个整数。语法1parseInt(string, radix)
+
+
+
+参数
+描述
+
+
+
+
+string
+必需。要被解析的字符串。
+
+
+radix
+可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js中的parseInt方法总结">
+<meta property="og:url" content="http://dreammin.github.com/20160515/js中的parseInt方法总结/index.html">
+<meta property="og:site_name" content="Dreammin's blog">
+<meta property="og:description" content="###在w3School中定义定义和用法parseInt() 函数可解析一个字符串，并返回一个整数。语法1parseInt(string, radix)
+
+
+
+参数
+描述
+
+
+
+
+string
+必需。要被解析的字符串。
+
+
+radix
+可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以">
+<meta property="og:updated_time" content="2016-07-24T08:32:18.745Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js中的parseInt方法总结">
+<meta name="twitter:description" content="###在w3School中定义定义和用法parseInt() 函数可解析一个字符串，并返回一个整数。语法1parseInt(string, radix)
+
+
+
+参数
+描述
+
+
+
+
+string
+必需。要被解析的字符串。
+
+
+radix
+可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以">
+  
+    <link rel="alternative" href="/atom.xml" title="Dreammin&#39;s blog" type="application/atom+xml">
+  
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/">Dreammin</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">好好吃饭～好好睡觉～好好学习～</p>
+        
+        
+        <form><input type="text" class="search" placeholder=" Search..."></form>
+                
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="/1553085243@qq.com" title="Email"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/Dreammin" title="GitHub"></a></li>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/compress/" style="font-size: 10px;">compress</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/pageSpeed/" style="font-size: 10px;">pageSpeed</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://panzhihui.github.io">Spanda</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Dreammin</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img lazy-src="/img/avatar.jpg" class="js-avatar">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Dreammin</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">好好吃饭～好好睡觉～好好学习～</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="/1553085243@qq.com" title="Email"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/Dreammin" title="GitHub"></a></li>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-js中的parseInt方法总结" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/20160515/js中的parseInt方法总结/" class="article-date">
+      <time datetime="2016-05-15T08:21:58.000Z" itemprop="datePublished">2016-05-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js中的parseInt方法总结
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>###在<a href="http://www.w3school.com.cn/jsref/jsref_parseInt.asp" target="_blank" rel="external">w3School</a>中定义<br><strong>定义和用法</strong><br>parseInt() 函数可解析一个字符串，并返回一个整数。<br><strong>语法</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(string, radix)</span><br></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>string</em></td>
+<td style="text-align:center">必需。要被解析的字符串。</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>radix</em></td>
+<td style="text-align:center">可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。</td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<p>###解析规则</p>
+<ol>
+<li><p><em>string</em>头尾部空格将被自动除去</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">"    011      "</span>,<span class="number">2</span>)      <span class="comment">//3</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>若<em>string</em>不是字符串，则将其转换为字符串再解析</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="number">11</span>,<span class="number">2</span>)       <span class="comment">//3</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">011</span>,<span class="number">2</span>)      <span class="comment">//NaN  011转换成string是9，而9对于二进制是非法字符</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">011</span>)        <span class="comment">//9</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">1.11</span>,<span class="number">10</span>)    <span class="comment">//1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果<em>radix</em>不是数值，会被自动转为一个整数。这个整数只有在2到36之间，才能得到有意义的结果，超出这个范围，则返回NaN。如果第二个参数是0、undefined和null则直接忽略。如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>, <span class="number">37</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>, <span class="number">1</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>, <span class="number">0</span>) <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>, <span class="literal">null</span>) <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>, <span class="literal">undefined</span>) <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>两个参数都存在的情况下，以<em>radix</em>为基数解数数析<em>string</em>。如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">"011"</span>,<span class="number">2</span>)      <span class="comment">//3</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">"011"</span>,<span class="number">10</span>)     <span class="comment">//11</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">"011"</span>,<span class="number">16</span>)     <span class="comment">//17</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果字符串包含对于指定进制无意义的字符，则返回<code>NaN</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'1546'</span>, <span class="number">2</span>) <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'546'</span>, <span class="number">2</span>) <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第二个参数<em>radix</em>省略时，默认为10进制解析，以0x开头时以16进制解析。以0开头时ES5规定按照10进制解析。如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">"11"</span>)         <span class="comment">//11</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">"011"</span>)        <span class="comment">//11，目前chrome、firefox、ie中的结果都是11，若想用8进制解析，请加上第二个参数！</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">"0x11"</span>)       <span class="comment">//17</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>当<em>string</em>解析成整数的时候，是一个个字符依次转换，当遇到不能转换成数字的字符时将停止解析，只返回前面解析的结果。如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">"11ww"</span>)       <span class="comment">//11</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">"011ww"</span>)      <span class="comment">//11</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">"0x11ww"</span>)     <span class="comment">//17</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">"0ww"</span>)        <span class="comment">//0, 解析成parseInt("0",10)</span></span><br><span class="line"><span class="comment">//如果存在参数radix时则按该参数值为基数解析</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">"011w"</span>,<span class="number">10</span>)       <span class="comment">//11, 直接按10进制解析</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">"0xww"</span>,<span class="number">10</span>)       <span class="comment">//0, 直接按10进制解析，遇到非数字则停止</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>当<em>string</em>的第一个字符不能被转换成数字（后面跟着数字的正负号除外），结果返回NaN</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">"ww"</span>)         <span class="comment">//NaN, 解析成parseInt("",10);</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">"0xww"</span>)       <span class="comment">//NaN, 解析成parseInt("",16)</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">"+11"</span>)       <span class="comment">//11</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自动转为科学计数法的数字，parseInt会将科学计数法的表示方法视为字符串。如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="number">1000000000000000000000.5</span>) <span class="comment">// 1, 等同parseInt('1e+21') </span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">0.0000008</span>)                <span class="comment">// 8, 等同于parseInt('8e-7')</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>###存在问题<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">"1111111111111111111111"</span>, <span class="number">10</span>) <span class="comment">//1.1111111111111111e+21, 22位</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">1111111111111111111111</span>, <span class="number">10</span>)   <span class="comment">//1, 22位</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">111111111111111111111</span>, <span class="number">10</span>)    <span class="comment">//111111111111111110000, 21位</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">11111111111111111111</span>, <span class="number">10</span>)     <span class="comment">//11111111111111110000，20位</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">1111111111111111111</span>, <span class="number">10</span>)      <span class="comment">//1111111111111111200, 19位</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">111111111111111111</span>, <span class="number">10</span>)       <span class="comment">//111111111111111100, 18位</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">11111111111111111</span>, <span class="number">10</span>)        <span class="comment">//11111111111111112, 17位</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">1111111111111111</span>, <span class="number">10</span>)         <span class="comment">//1111111111111111, 16位</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>解释</strong><br>JavaScript的数值有多种表示方法，可以用字面形式直接表示，也可以采用科学计数法表示，下面是两个科学计数法的例子。<br>以下两种情况，JavaScript会自动将数值转为科学计数法表示，其他情况都采用字面形式直接表示。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.小数点前的数字多于21位。</span></span><br><span class="line"><span class="number">1234567890123456789012</span>    <span class="comment">// 1.2345678901234568e+21</span></span><br><span class="line"><span class="number">123456789012345678901</span>     <span class="comment">// 123456789012345680000</span></span><br><span class="line"><span class="comment">//2.小数点后的零多于5个。 </span></span><br><span class="line"><span class="number">0.0000003</span>   <span class="comment">// 3e-7</span></span><br><span class="line"><span class="number">0.000003</span>    <span class="comment">// 0.000003</span></span><br><span class="line"><span class="comment">/*</span><br><span class="line">*结果如下：</span><br><span class="line">*/</span></span><br><span class="line"><span class="number">1111111111111111111111</span> 自动转化为 <span class="number">1.1111111111111111e+21</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">1.1111111111111111e+21</span>, <span class="number">10</span>) -&gt; <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>####参考链接<br><a href="http://www.cnblogs.com/frostbelt/p/3544904.html" target="_blank" rel="external">js 的数值限制可能引起的问题</a><br><a href="http://www.cnblogs.com/anjey/archive/2012/04/13/2445430.html" target="_blank" rel="external">浅谈 js中parseInt函数的解析</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/20160515/js中的parseInt方法总结/">js中的parseInt方法总结</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Dreammin 的个人博客">Dreammin</a></p>
+        <p><span>发布时间:</span>2016年05月15日 - 16时21分</p>
+        <p><span>最后更新:</span>2016年07月24日 - 16时32分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/20160515/js中的parseInt方法总结/" title="js中的parseInt方法总结">http://dreammin.github.com/20160515/js中的parseInt方法总结/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://dreammin.github.com/20160515/js中的parseInt方法总结/　　作者: Dreammin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/20160519/js数组方法全面总结/">
+                    js数组方法全面总结
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/20160125/选课系统前端性能评估和解决方案/">
+                    选课系统前端性能评估和解决方案
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+<div class="share">
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+    <a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+    <a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+    </div>
+    <script>
+        window._bd_share_config={
+            "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+</div>
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/20160519/js数组方法全面总结/" title="上一篇: js数组方法全面总结">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/20160125/选课系统前端性能评估和解决方案/" title="下一篇: 选课系统前端性能评估和解决方案">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/20160719/js中数组去重的几种方法/">js中数组去重的几种方法</a></li><li class="post-list-item"><a class="post-list-link" href="/20160715/关于Meta标签/">关于Meta标签</a></li><li class="post-list-item"><a class="post-list-link" href="/20160714/浏览器中输入url后发生了什么/">浏览器中输入url后发生了什么</a></li><li class="post-list-item"><a class="post-list-link" href="/20160704/javascript中安全的类型检测/">javascript中安全的类型检测</a></li><li class="post-list-item"><a class="post-list-link" href="/20160604/判断document加载过程的几个不同方法/">判断document加载过程的几个不同方法</a></li><li class="post-list-item"><a class="post-list-link" href="/20160519/js数组方法全面总结/">js数组方法全面总结</a></li><li class="post-list-item"><a class="post-list-link" href="/20160515/js中的parseInt方法总结/">js中的parseInt方法总结</a></li><li class="post-list-item"><a class="post-list-link" href="/20160125/选课系统前端性能评估和解决方案/">选课系统前端性能评估和解决方案</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 Dreammin
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a>
+            </div>
+        </div>
+        <div class="visit">
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <span id="site-visit" >本站到访数: 
+                    <span id="busuanzi_value_site_uv"></span>
+                </span>
+            </span>
+            <span id="busuanzi_container_page_pv" style='display:none'>
+                <span id="page-visit">, 本页阅读量: 
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+            </span>
+        </div>
+    </div>
+</footer>
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
