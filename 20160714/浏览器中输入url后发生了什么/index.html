@@ -15,7 +15,7 @@
 <meta property="og:image" content="http://dreammin.github.io/../img/url图二.png">
 <meta property="og:image" content="http://dreammin.github.io/../img/url图三.png">
 <meta property="og:image" content="http://dreammin.github.io/../img/url图四.png">
-<meta property="og:updated_time" content="2016-07-24T11:55:04.706Z">
+<meta property="og:updated_time" content="2016-07-27T14:22:36.557Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浏览器中输入url后发生了什么">
 <meta name="twitter:description" content="在学习前端的过程中经常看到这样一个问题：当你在浏览器中输入url后发生了什么？下面是个人学习过程中的总结，供个人复习使用，如有理解不正确或不足的地方希望大家指出。先上一张脑图：">
@@ -265,10 +265,9 @@
 <li>2**：成功状态码<br>200：OK 请求正常处理<br>204：No Content请求处理成功，但没有资源可返回<br>206：Partial Content对资源的某一部分的请求</li>
 <li>3**：重定向状态码<br>301：Moved Permanently 永久重定向<br>302：Found 临时性重定向<br>304：Not Modified 缓存中读取</li>
 <li>4**：客户端错误状态码<br>400：Bad Request 请求报文中存在语法错误<br>401：Unauthorized需要有通过Http认证的认证信息<br>403：Forbidden访问被拒绝<br>404：Not Found无法找到请求资源</li>
-<li><p>5**：服务器错误状态码<br>500：Internal Server Error 服务器端在执行时发生错误<br>503：Service Unavailable 服务器处于超负载或者正在进行停机维护</p>
-<p>响应报文：<br><img src="/../img/url图三.png" alt="响应报文"></p>
-</li>
+<li>5**：服务器错误状态码<br>500：Internal Server Error 服务器端在执行时发生错误<br>503：Service Unavailable 服务器处于超负载或者正在进行停机维护  </li>
 </ul>
+<p> 响应报文：<br><img src="/../img/url图三.png" alt="响应报文"></p>
 <h3 id="5-__u6D4F_u89C8_u5668_u89E3_u6790html"><a href="#5-__u6D4F_u89C8_u5668_u89E3_u6790html" class="headerlink" title="5. 浏览器解析html"></a>5. 浏览器解析html</h3><p> 浏览器按顺序解析html文件，构建DOM树，在解析到外部的css和js文件时，向服务器发起请求下载资源，若是下载css文件，则解析器会在下载的同时继续解析后面的html来构建DOM树，则在下载js文件和执行它时，解析器会停止对html的解析。这便出现了js阻塞问题。<br><strong>预加载器</strong>：<br>      当浏览器被脚本文件阻塞时，预加载器（一个轻量级的解析器）会继续解析后面的html，寻找需要下载的资源。如果发现有需要下载的资源，预加载器在开始接收这些资源。预加载器只能检索HTML标签中的URL，无法检测到使用脚本添加的URL，这些资源要等脚本代码执行时才会获取。<br>注: 预解析并不改变Dom树，它将这个工作留给主解析过程</p>
 <p>浏览器解析css，形成CSSOM树，当DOM树构建完成后，浏览器引擎通过DOM树和CSSOM树构造出渲染树。渲染树中包含可视节点的样式信息（不可见节点将不会被添加到渲染树中，如：head元素和display值为none的元素）</p>
 <h3 id="6-__u6D4F_u89C8_u5668_u5E03_u5C40_u6E32_u67D3"><a href="#6-__u6D4F_u89C8_u5668_u5E03_u5C40_u6E32_u67D3" class="headerlink" title="6. 浏览器布局渲染"></a>6. 浏览器布局渲染</h3><ul>
@@ -289,7 +288,7 @@
         <p><span>本文标题:</span><a href="/20160714/浏览器中输入url后发生了什么/">浏览器中输入url后发生了什么</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Dreammin 的个人博客">Dreammin</a></p>
         <p><span>发布时间:</span>2016年07月14日 - 16时22分</p>
-        <p><span>最后更新:</span>2016年07月24日 - 19时55分</p>
+        <p><span>最后更新:</span>2016年07月27日 - 22时22分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/20160714/浏览器中输入url后发生了什么/" title="浏览器中输入url后发生了什么">http://dreammin.github.io/20160714/浏览器中输入url后发生了什么/</a>
             <span class="copy-path" data-clipboard-text="原文: http://dreammin.github.io/20160714/浏览器中输入url后发生了什么/　　作者: Dreammin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
